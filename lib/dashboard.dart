@@ -33,6 +33,13 @@ class _DashBoardState extends State<DashBoard> {
       result = num1 * num2;
     });
   }
+  void todiv(){
+    setState(() {
+      num1 =int.parse(r1.text);
+      num2 = int.parse(r2.text);
+      result = num1 ~/ num2;
+    });
+  }
   void toclear(){
     setState(() {
       r1.text="0";
@@ -90,6 +97,20 @@ class _DashBoardState extends State<DashBoard> {
                   child: Text("Mul (x)"),
                 ),
               ],
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                 RaisedButton(
+                  onPressed: todiv,
+                  child: Text("Divide(/)"),
+                ),
+              ],
+
             ),
             SizedBox(
               height: 40.0,
