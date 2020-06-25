@@ -33,18 +33,20 @@ class _DashBoardState extends State<DashBoard> {
       result = num1 * num2;
     });
   }
-  void todiv(){
+
+  void todiv() {
     setState(() {
-      num1 =int.parse(r1.text);
+      num1 = int.parse(r1.text);
       num2 = int.parse(r2.text);
       result = num1 ~/ num2;
     });
   }
-  void toclear(){
+
+  void toclear() {
     setState(() {
-      r1.text="0";
-      r2.text="0";
-      result=0;
+      r1.text = "0";
+      r2.text = "0";
+      result = 0;
     });
   }
 
@@ -55,56 +57,49 @@ class _DashBoardState extends State<DashBoard> {
         title: Text("Calculator"),
       ),
       drawer: Drawer(
-        child:ListView(
+        child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(child: Text("Calculator",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight:FontWeight.bold,
-              fontSize: 30.0,
-            ),
-            ),
-            decoration: BoxDecoration(
-              color:Colors.red,
-            ),
+            DrawerHeader(
+              child: Text(
+                "Calculator",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30.0,
+                ),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.red,
+              ),
             ),
             Column(
-              children:<Widget>[
+              children: <Widget>[
                 ListTile(
                   leading: Icon(Icons.done),
                   title: Text("Basic Operation"),
                   subtitle: Text("Two number operations"),
-                  onTap: (){
-
-                  },
-                
-
-              ),
-               ListTile(
+                  onTap: () {},
+                ),
+                ListTile(
                   leading: Icon(Icons.done),
                   title: Text("Percentage"),
                   subtitle: Text("Calculating Percentage"),
-                 onTap: (){
-                    
-                  },
-
-              ),
-               ListTile(
+                  onTap: () {},
+                ),
+                ListTile(
                   leading: Icon(Icons.done),
                   title: Text("Discount"),
                   subtitle: Text("Calculating Discount"),
-                 onTap: (){
+                  
+                  onTap: () {
                     
                   },
-
-              ),
+                ),
               ],
-                           
             ),
           ],
-
         ),
       ),
       body: SingleChildScrollView(
@@ -149,22 +144,16 @@ class _DashBoardState extends State<DashBoard> {
                   onPressed: tomul,
                   child: Text("Mul (x)"),
                 ),
-              ],
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
                  RaisedButton(
                   onPressed: todiv,
                   child: Text("Divide(/)"),
                 ),
               ],
-
             ),
+            SizedBox(
+              height: 10.0,
+            ),
+           
             SizedBox(
               height: 40.0,
             ),
@@ -189,10 +178,10 @@ class _DashBoardState extends State<DashBoard> {
                 ),
                 SizedBox(
                   height: 20.0,
-
                 ),
-                RaisedButton(onPressed: toclear,
-                child:  Text("Clear"),
+                RaisedButton(
+                  onPressed: toclear,
+                  child: Text("Clear"),
                 ),
               ],
             ),
