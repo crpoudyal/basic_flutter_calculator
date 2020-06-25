@@ -1,3 +1,4 @@
+import 'package:calculator/drawer.dart';
 import 'package:flutter/material.dart';
 
 class DashBoard extends StatefulWidget {
@@ -56,52 +57,7 @@ class _DashBoardState extends State<DashBoard> {
       appBar: AppBar(
         title: Text("Calculator"),
       ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text(
-                "Calculator",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30.0,
-                ),
-              ),
-              decoration: BoxDecoration(
-                color: Colors.red,
-              ),
-            ),
-            Column(
-              children: <Widget>[
-                ListTile(
-                  leading: Icon(Icons.done),
-                  title: Text("Basic Operation"),
-                  subtitle: Text("Two number operations"),
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: Icon(Icons.done),
-                  title: Text("Percentage"),
-                  subtitle: Text("Calculating Percentage"),
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: Icon(Icons.done),
-                  title: Text("Discount"),
-                  subtitle: Text("Calculating Discount"),
-                  
-                  onTap: () {
-                    
-                  },
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
+      drawer: MyDrawer(),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -144,7 +100,7 @@ class _DashBoardState extends State<DashBoard> {
                   onPressed: tomul,
                   child: Text("Mul (x)"),
                 ),
-                 RaisedButton(
+                RaisedButton(
                   onPressed: todiv,
                   child: Text("Divide(/)"),
                 ),
@@ -153,7 +109,6 @@ class _DashBoardState extends State<DashBoard> {
             SizedBox(
               height: 10.0,
             ),
-           
             SizedBox(
               height: 40.0,
             ),
