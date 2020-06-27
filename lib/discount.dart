@@ -13,7 +13,48 @@ class _DiscountState extends State<Discount> {
       appBar: AppBar(
         title:Text("Discount"),
       ),
-      body: Text("Discount page"),
+      body: Padding(
+        padding: const EdgeInsets.all(30.0),
+        child: Center(
+          
+          child:Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children:<Widget>[
+              
+             
+              TextField(
+                  keyboardType: TextInputType.number,
+                 
+                  decoration: InputDecoration(
+                    hintText: "Enter a number",
+                    labelText: "Total",
+                  ),
+                ),
+                 SizedBox(
+                  height: 10.0,
+                ),
+                 TextField(
+                  keyboardType: TextInputType.number,
+                 
+                  decoration: InputDecoration(
+                    hintText: "Enter a number",
+                    labelText: "Discount Percentage (%)",
+                  ),
+                ),
+                 SizedBox(
+                  height: 50.0,
+                ),
+                Text("Result : ",
+                style: TextStyle(
+                  fontSize: 30.0,
+                  fontWeight:FontWeight.bold,
+                ),
+                ),
+               
+            ],
+          )
+        ),
+      )
       
     );
   }
