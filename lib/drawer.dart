@@ -1,4 +1,8 @@
+import 'package:calculator/dashboard.dart';
+import 'package:calculator/discount.dart';
+import 'package:calculator/percentage.dart';
 import 'package:flutter/material.dart';
+
 
 class MyDrawer extends StatefulWidget {
   @override
@@ -32,19 +36,26 @@ class _MyDrawerState extends State<MyDrawer> {
                 leading: Icon(Icons.done),
                 title: Text("Basic Operation"),
                 subtitle: Text("Two number operations"),
-                onTap: () {},
+                onTap:(){
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=>DashBoard()));
+                },
+                
               ),
               ListTile(
                 leading: Icon(Icons.done),
                 title: Text("Percentage"),
                 subtitle: Text("Calculating Percentage"),
-                onTap: () {},
+                onTap:(){
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Percentage()));
+                },
               ),
               ListTile(
                 leading: Icon(Icons.done),
                 title: Text("Discount"),
                 subtitle: Text("Calculating Discount"),
-                onTap: () {},
+                onTap:(){
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Discount()));
+                },
               ),
             ],
           ),
