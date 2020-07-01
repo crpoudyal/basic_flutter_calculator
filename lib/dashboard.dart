@@ -56,7 +56,12 @@ class _DashBoardState extends State<DashBoard> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Calculator"),
+        actions: <Widget>[
+          IconButton(icon:Icon(Icons.more_vert), onPressed: (){}
+          ),
+        ],
       ),
+      
       
       drawer: MyDrawer(),
       
