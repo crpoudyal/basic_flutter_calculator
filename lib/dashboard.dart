@@ -57,7 +57,9 @@ class _DashBoardState extends State<DashBoard> {
       appBar: AppBar(
         title: Text("Calculator"),
       ),
+      
       drawer: MyDrawer(),
+      
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

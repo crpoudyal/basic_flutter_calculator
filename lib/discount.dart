@@ -20,7 +20,8 @@ void disperform(){
  void tocelar(){
   setState(() {
      r3.text="0";
-   r4.text="0";
+     r4.text="0";
+     result=0;
   });
 
  }
@@ -68,7 +69,7 @@ void disperform(){
               ),
               RaisedButton(
                 onPressed:disperform,
-                child: Text("GO"),
+                child: Text("GO-check"),
               ),
                SizedBox(
                 height: 20.0,

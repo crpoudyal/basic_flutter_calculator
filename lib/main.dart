@@ -1,6 +1,7 @@
 
+import 'package:calculator/splash.dart';
 import 'package:flutter/material.dart';
-import 'package:calculator/dashboard.dart';
+
 
 
 void main() {
@@ -12,7 +13,8 @@ void main() {
       theme: ThemeData(
         primarySwatch:Colors.red,
       ),
-      home: DashBoard(),
+      home: SplashScreen(),
+      
 
     ),
 
